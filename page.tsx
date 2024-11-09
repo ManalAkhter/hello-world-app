@@ -1,40 +1,39 @@
-import Image from 'next/image'
+ import React from 'react';
+ import './footer.css';
 
-export default function Home() {
+
+ const Footer =() => {
     return (
-        <>
-            {/* Below code is with CSS */}
-            <div className="homeContainer mx-auto">
-                <div className="childContainer">
-                    <br/>
-                    <br/>
-                    
-                   <h1> Hey,</h1>
-                    
-                <h2> My Name is <span className="pinkcolor"> Manal </span></h2>
-                    
-                <h3>I am Next JS Developer</h3>
-                </div>
-                
-            </div>
-
-            {/* Below COde Is With Tailwind */}
-            <div className="flex justify-end items-center mt-4">
-                <div className="w-fit h-[250px] m-[40px] text-[80px] font-black">
-                </div>
-                <div className=""></div>
+    <div>
+        
+        <footer className='footer'>
             
+            <div className='footer-content'>
+                <p>&copy; {new Date().getFullYear()} my portfolio.</p>
+                <ul className='social-links'>
+                    <li>
+                        <a 
+                        href='https://twitter.com'
+                        target='_blank'
+                        rel='noopenernoreferrer'>Twitter</a>
+                    </li>
+                    <li>
+                        <a
+                        href='https://facebook.com'
+                        target='_blank'
+                        rel='noopenernoreferrer'>Facebook</a>
+                    </li>
+                    <li>
+                        <a
+                        href='https://linkedin.com'
+                        target='_blank'
+                        rel='noopenerenoreferrer'>Linkedin</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        </div>
+    );
+ };
 
-        <Image 
-        src={'/profile pic.jpg'}
-         alt="profile pic" 
-         width={300}
-        height={300}
-         className='rounded-full' 
-         />
-       </div>
-
-            </>
-
-            );
-}
+ export default Footer;
